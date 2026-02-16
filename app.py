@@ -65,5 +65,8 @@ def predict():
 
 # 6. RENDER PORT BINDING (The final cure for 'No open ports detected')
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
+    import os
+    # Render assigns a dynamic port; we must capture it
+    port = int(os.environ.get("PORT", 10000)) 
+    # '0.0.0.0' is required to make it accessible to the internet
     app.run(host='0.0.0.0', port=port)
