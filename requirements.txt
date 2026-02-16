@@ -1,0 +1,8 @@
+flask
+flask-cors
+tensorflow-cpu==2.15.0
+pillow
+rembg
+onnxruntime
+gdown
+gunicorn
